@@ -1,0 +1,11 @@
+scalar JSON
+
+type RealTimeRes {
+  message: String
+  changedData: JSON
+}
+
+type Subscription {
+  newInstitution: RealTimeRes!
+  newUploadFile: RealTimeRes!
+}

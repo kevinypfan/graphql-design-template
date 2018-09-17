@@ -1,0 +1,29 @@
+type Institution {
+  id: ID!
+  institutionId: ID!
+  institutionName: String!
+  licenseBedCount: Int!
+  openBedCount: Int!
+}
+
+type Query {
+  getInstitutionById(id: ID!): Institution
+  getInstitutionList: [Institution]
+}
+
+type Mutation {
+  newInstitution(
+    institutionId: ID!
+    institutionName: String!
+    licenseBedCount: Int!
+    openBedCount: Int!
+  ): Institution!
+  delInstitutionById(id: ID!): Institution
+  updateInstitutionById(
+    id: ID!
+    institutionId: ID!
+    institutionName: String!
+    licenseBedCount: Int!
+    openBedCount: Int!
+  ): Institution
+}
